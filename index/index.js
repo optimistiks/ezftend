@@ -1,4 +1,4 @@
-angular.module('index', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+angular.module('index', ['ui.utils','ui.router','ngAnimate']);
 
 angular.module('index').config(function($stateProvider) {
 
