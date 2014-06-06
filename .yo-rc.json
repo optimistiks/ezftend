@@ -17,6 +17,12 @@
         "marker": "/* Add Component LESS Above */",
         "template": "@import \"<%= filename %>\";"
       }
-    }
+    },
+    "modules": [
+      {
+        "name": "index",
+        "file": "index/index.js"
+      }
+    ]
   }
 }

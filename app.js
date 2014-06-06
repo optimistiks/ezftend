@@ -1,9 +1,9 @@
-angular.module('ezdictFrontend', ['ui.bootstrap','ui.utils','ui.router','ngAnimate']);
+angular.module('ezdictFrontend', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'index']);
 
 angular.module('ezdictFrontend').config(function($stateProvider, $urlRouterProvider) {
 
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 
 });
 
