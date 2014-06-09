@@ -76,7 +76,7 @@ module.exports = function (grunt) {
                 options: {
                 },
                 files: {
-                    'temp/app-less.css': 'app.less'
+                    'temp/app.css': 'app.less'
                 }
             }
         },
