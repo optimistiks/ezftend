@@ -29,5 +29,5 @@ cd /home/vagrant/ezdict_frontend
 npm install
 ln -s /home/vagrant/ezdict_frontend/node_modules /vagrant/node_modules
 cd /vagrant
-bower install
+bower install --allow-root
 grunt test

@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                     spawn: false
                 },
                 files: [createFolderGlobs(['*.js', '*.less', '*.html', '*.scss', '*.sass']), '!_SpecRunner.html', '!.grunt'],
-                tasks: [] //all the tasks are run dynamically during the watch event handler
+                tasks: ['compass:dist'] //all the tasks are run dynamically during the watch event handler
             }
         },
         jshint: {
@@ -80,26 +80,15 @@ module.exports = function (grunt) {
                 }
             }
         },
-/*        sass: {
-            dev: {
-                options: {
-                    style: 'expanded',
-                    compass: true
-                },
-                files: {
-                    'temp/app.css': 'app.scss'
-                }
-            },
-            dist: {
-                options: {
-                    style: 'compressed',
-                    compass: true
-                },
-                files: {
-                    'temp/app.css': 'app.scss'
-                }
-            }
-        },*/
+		compass: {
+			dist: {
+				options: {
+					sassDir: './',
+					cssDir: './',
+					specify: 'app.scss',
+				}
+			}
+		},
         ngtemplates: {
             main: {
                 options: {
