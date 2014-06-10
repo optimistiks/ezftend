@@ -51,8 +51,8 @@ module.exports = function (grunt) {
                     livereloadOnError: false,
                     spawn: false
                 },
-                files: [createFolderGlobs(['*.js', '*.less', '*.html', '*.scss', '*.sass']), '!_SpecRunner.html', '!.grunt'],
-                tasks: ['compass:dist'] //all the tasks are run dynamically during the watch event handler
+                files: [createFolderGlobs(['*.scss', '*.sass', '*.js', '*.html']), '!_SpecRunner.html', '!.grunt'],
+                tasks: [] //all the tasks are run dynamically during the watch event handler
             }
         },
         jshint: {
@@ -71,20 +71,11 @@ module.exports = function (grunt) {
                 src: ['temp']
             }
         },
-        less: {
-            production: {
-                options: {
-                },
-                files: {
-                    'temp/app.css': 'app.less'
-                }
-            }
-        },
 		compass: {
 			dist: {
 				options: {
 					sassDir: './',
-					cssDir: './',
+					cssDir: 'temp',
 					specify: 'app.scss',
 				}
 			}
@@ -205,16 +196,23 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('build', ['jshint', 'clean:before', 'less', 'dom_munger', 'ngtemplates', 'cssmin', 'concat',
+    grunt.registerTask('build', ['jshint', 'clean:before', 'dom_munger', 'ngtemplates', 'compass', 'cssmin', 'concat',
         'ngmin', 'uglify', 'copy', 'htmlmin', 'imagemin', 'clean:after']);
-    grunt.registerTask('serve', ['dom_munger:read', 'jshint', 'connect', 'watch']);
+    grunt.registerTask('serve', ['clean:before', 'dom_munger:read', 'jshint', 'compass', 'connect', 'watch']);
     grunt.registerTask('test', ['dom_munger:read', 'karma:all_tests']);
 
     grunt.event.on('watch', function (action, filepath) {
         //https://github.com/gruntjs/grunt-contrib-watch/issues/156
 
         var tasksToRun = [];
+		
+		if ((filepath.lastIndexOf('.scss') !== -1 && filepath.lastIndexOf('.scss') === filepath.length - 5) ||
+			(filepath.lastIndexOf('.sass') !== -1 && filepath.lastIndexOf('.sass') === filepath.length - 5)) 
+		{
+		    tasksToRun.push('compass');
+		}
 
+		
         if (filepath.lastIndexOf('.js') !== -1 && filepath.lastIndexOf('.js') === filepath.length - 3) {
 
             //lint the changed js file

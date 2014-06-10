@@ -5,3 +5,4 @@ npm-debug.log
 .vagrant
 .sass-cache
 dist
+temp
