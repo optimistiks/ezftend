@@ -26,7 +26,7 @@ ezdict_front-end_2.0
 
 Уничтожить виртуалку и все ее следы: **vagrant destroy**
 
-После уничтожения, vagrant up снова будет выполняться долго.
+После уничтожения, **vagrant up** снова будет выполняться долго.
 
 [vbox]:http://download.virtualbox.org/virtualbox/4.3.12/VirtualBox-4.3.12-93733-Win.exe
 [vboxext]:http://download.virtualbox.org/virtualbox/4.3.12/Oracle_VM_VirtualBox_Extension_Pack-4.3.12-93733.vbox-extpack
