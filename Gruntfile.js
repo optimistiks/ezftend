@@ -74,9 +74,9 @@ module.exports = function (grunt) {
 		compass: {
 			dist: {
 				options: {
-					sassDir: './',
+					sassDir: 'sass',
 					cssDir: 'temp',
-					specify: 'app.scss',
+					specify: 'sass/app.scss'
 				}
 			}
 		},
@@ -135,7 +135,7 @@ module.exports = function (grunt) {
                 dest: 'temp/app.full.js'
             }
         },
-        ngmin: {
+        ngAnnotate: {
             main: {
                 src: 'temp/app.full.js',
                 dest: 'temp/app.full.js'
@@ -197,7 +197,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build', ['jshint', 'clean:before', 'dom_munger', 'ngtemplates', 'compass', 'cssmin', 'concat',
-        'ngmin', 'uglify', 'copy', 'htmlmin', 'imagemin', 'clean:after']);
+        'ngAnnotate', 'uglify', 'copy', 'htmlmin', 'imagemin', 'clean:after']);
     grunt.registerTask('serve', ['clean:before', 'dom_munger:read', 'jshint', 'compass', 'connect', 'watch']);
     grunt.registerTask('test', ['dom_munger:read', 'karma:all_tests']);
 
