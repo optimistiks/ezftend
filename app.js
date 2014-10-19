@@ -1,4 +1,4 @@
-angular.module('ezdictFrontend', ['ui.utils', 'ui.router', 'ngAnimate', 'index']);
+angular.module('ezdictFrontend', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'index']);
 
 angular.module('ezdictFrontend').config(function($stateProvider, $urlRouterProvider) {
 

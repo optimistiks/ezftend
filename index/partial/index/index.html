@@ -1,3 +1,9 @@
 <div class="col-md-12" ng-controller="IndexCtrl">
-    heres
+    heres<br>
+    <button type="button" class="btn btn-primary">Primary</button><br>
+    	<button class="btn btn-danger" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+	<hr>
+	<div collapse="isCollapsed">
+		<div class="well well-lg">Some content</div> 
+	</div>
 </div>
