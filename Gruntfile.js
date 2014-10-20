@@ -99,6 +99,11 @@ module.exports = function (grunt) {
                     //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'dist/css/',flatten:true,expand:true},
                     //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'dist/'}
                 ]
+            },
+            bootstrap: {
+                files: [
+                    {src: 'css/bootstrap.css', dest: 'temp/bootstrap.css'}
+                ]
             }
         },
         dom_munger: {
@@ -125,7 +130,7 @@ module.exports = function (grunt) {
         },
         cssmin: {
             main: {
-                src: ['temp/app.css', '<%= dom_munger.data.appcss %>'],
+                src: ['temp/bootstrap.css', 'temp/app.css', '<%= dom_munger.data.appcss %>'],
                 dest: 'dist/app.full.min.css'
             }
         },
@@ -196,9 +201,9 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('build', ['jshint', 'clean:before', 'dom_munger', 'ngtemplates', 'compass', 'cssmin', 'concat',
+    grunt.registerTask('build', ['jshint', 'clean:before', 'dom_munger', 'ngtemplates', 'copy:bootstrap', 'compass', 'cssmin', 'concat',
         'ngAnnotate', 'uglify', 'copy', 'htmlmin', 'imagemin', 'clean:after']);
-    grunt.registerTask('serve', ['clean:before', 'dom_munger:read', 'jshint', 'compass', 'connect', 'watch']);
+    grunt.registerTask('serve', ['clean:before', 'dom_munger:read', 'jshint', 'copy:bootstrap', 'compass', 'connect', 'watch']);
     grunt.registerTask('test', ['dom_munger:read', 'karma:all_tests']);
 
     grunt.event.on('watch', function (action, filepath) {
