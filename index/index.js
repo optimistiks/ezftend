@@ -6,6 +6,14 @@ angular.module('index').config(function($stateProvider) {
         url: '/',
         templateUrl: 'index/partial/index/index.html'
     });
+    $stateProvider.state('add', {
+        url: '/add',
+        templateUrl: 'index/partial/add/add.html'
+    });
+    $stateProvider.state('profile', {
+        url: '/profile',
+        templateUrl: 'index/partial/profile/profile.html'
+    });
     /* Add New States Above */
 
 });
