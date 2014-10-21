@@ -14,6 +14,10 @@ angular.module('index').config(function($stateProvider) {
         url: '/profile',
         templateUrl: 'index/partial/profile/profile.html'
     });
+    $stateProvider.state('search', {
+        url: '/search',
+        templateUrl: 'index/partial/search/search.html'
+    });
     /* Add New States Above */
 
 });
