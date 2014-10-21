@@ -36,11 +36,15 @@
 <script src="index/partial/profile/profile.js"></script>
 <script src="index/partial/header/header.js"></script>
 <script src="index/partial/search/search.js"></script>
+<script src="landing/landing.js"></script>
+<script src="landing/partial/register/register.js"></script>
+<script src="landing/partial/header/header.js"></script>
 <!-- Add New Component JS Above -->
 
 <div>
     <div id="content" class="container">
-        <div ng-include="'index/partial/header/header.html'"></div>
+        <div ng-include="'index/partial/header/header.html'" ng-if="isAuthenticated"></div>
+        <div ng-include="'landing/partial/header/header.html'" ng-if="!isAuthenticated"></div>
         <div ui-view></div>
     </div>
 </div>

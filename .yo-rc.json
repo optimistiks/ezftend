@@ -22,6 +22,10 @@
       {
         "name": "index",
         "file": "index/index.js"
+      },
+      {
+        "name": "landing",
+        "file": "landing/landing.js"
       }
     ]
   }
