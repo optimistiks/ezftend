@@ -1,7 +1,27 @@
 <div class="row" ng-controller="SearchCtrl">
-    <div class="col-md-12" >
-search
+  <div class="col-md-12">
+    <p>
+      всего результатов: <b>5048</b>
+    </p>
+    <table class="table">
+      <tbody>
+      <tr ng-repeat="i in [1,2,3,4,5]">
+        <td>
+          <h3>Заголовок текста</h3>
 
-</div>
+          <p>Начало текста, не более 420 символов...</p>
+
+          <p>
+            <div register-to-read></div>
+          </p>
+
+          <p class="text-muted text-right">
+            <small>добавил Sargon 23.12.2014 в 14:04</small>
+          </p>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>
