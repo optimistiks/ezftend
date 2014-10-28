@@ -15,10 +15,6 @@ angular.module('index').config(function ($stateProvider) {
     url: '/add',
     templateUrl: 'index/partial/add/add.html'
   });
-  $stateProvider.state('profile', {
-    url: '/profile',
-    templateUrl: 'index/partial/profile/profile.html'
-  });
   $stateProvider.state('search', {
     url: '/search',
     templateUrl: 'index/partial/search/search.html'

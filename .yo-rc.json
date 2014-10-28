@@ -26,6 +26,10 @@
       {
         "name": "landing",
         "file": "landing/landing.js"
+      },
+      {
+        "name": "profile",
+        "file": "profile/profile.js"
       }
     ]
   }
