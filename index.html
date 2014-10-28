@@ -47,8 +47,8 @@
 
 <div>
     <div id="content" class="container">
-        <div ng-include="'index/partial/header/header.html'" ng-if="isAuthenticated"></div>
-        <div ng-include="'landing/partial/header/header.html'" ng-if="!isAuthenticated"></div>
+        <div ng-include="'index/partial/header/header.html'" ng-if="!isAuthenticated"></div>
+        <div ng-include="'landing/partial/header/header.html'" ng-if="isAuthenticated"></div>
         <div ui-view></div>
     </div>
 </div>
