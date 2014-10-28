@@ -18,6 +18,10 @@ angular.module('index').config(function($stateProvider) {
         url: '/search',
         templateUrl: 'index/partial/search/search.html'
     });
+    $stateProvider.state('text', {
+        url: '/text/:id',
+        templateUrl: 'index/partial/text/text.html'
+    });
     /* Add New States Above */
 
 });
