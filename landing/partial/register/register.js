@@ -1,4 +1,3 @@
-angular.module('landing').controller('RegisterCtrl',function($scope){
-
+angular.module('landing').controller('RegisterCtrl', function ($scope) {
 
 });

@@ -1,18 +1,18 @@
-describe('AddCtrl', function() {
+describe('AddCtrl', function () {
 
-	beforeEach(module('index'));
+  beforeEach(module('index'));
 
-	var scope,ctrl;
+  var scope, ctrl;
 
-    beforeEach(inject(function($rootScope, $controller) {
-      scope = $rootScope.$new();
-      ctrl = $controller('AddCtrl', {$scope: scope});
-    }));	
+  beforeEach(inject(function ($rootScope, $controller) {
+    scope = $rootScope.$new();
+    ctrl = $controller('AddCtrl', {$scope: scope});
+  }));
 
-	it('should ...', inject(function() {
+  it('should ...', inject(function () {
 
-		expect(1).toEqual(1);
-		
-	}));
+    expect(1).toEqual(1);
+
+  }));
 
 });

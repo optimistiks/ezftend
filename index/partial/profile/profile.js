@@ -1,4 +1,3 @@
-angular.module('index').controller('ProfileCtrl',function($scope){
-
+angular.module('index').controller('ProfileCtrl', function ($scope) {
 
 });

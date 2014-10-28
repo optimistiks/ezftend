@@ -1,3 +1,3 @@
-angular.module('landing').controller('RegisterpromptCtrl',function($scope, $state){
+angular.module('landing').controller('RegisterpromptCtrl', function ($scope, $state) {
 
 });

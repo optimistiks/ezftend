@@ -1,4 +1,3 @@
-angular.module('landing').controller('LoginCtrl',function($scope){
-
+angular.module('landing').controller('LoginCtrl', function ($scope) {
 
 });

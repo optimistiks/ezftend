@@ -1,4 +1,3 @@
-angular.module('index').controller('SearchCtrl',function($scope){
-
+angular.module('index').controller('SearchCtrl', function ($scope) {
 
 });

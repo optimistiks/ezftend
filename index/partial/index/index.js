@@ -1,3 +1,3 @@
-angular.module('index').controller('IndexCtrl',function($scope, $modal){
+angular.module('index').controller('IndexCtrl', function ($scope, $modal) {
 
 });

@@ -1,16 +1,16 @@
-angular.module('landing').directive('registerToRead', function($modal) {
-	return {
-		replace: true,
-		templateUrl: 'landing/directive/registerToRead/registerToRead.html',
-		link: function(scope, element, attrs, fn) {
+angular.module('landing').directive('registerToRead', function ($modal) {
+  return {
+    replace: true,
+    templateUrl: 'landing/directive/registerToRead/registerToRead.html',
+    link: function (scope, element, attrs, fn) {
 
-      scope.read = function($event) {
+      scope.read = function ($event) {
         $event.preventDefault();
         if (!scope.isAuthenticated) {
           $modal.open({
             templateUrl: 'landing/registerPrompt/registerPrompt.html',
             controller: 'RegisterpromptCtrl'
-          }).result.then(function(result){
+          }).result.then(function (result) {
               console.log(result);
             });
         } else {
@@ -18,6 +18,6 @@ angular.module('landing').directive('registerToRead', function($modal) {
         }
       };
 
-		}
-	};
+    }
+  };
 });
