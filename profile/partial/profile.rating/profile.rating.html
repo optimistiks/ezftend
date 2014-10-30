@@ -1,6 +1,40 @@
-<div class="row">
-  <div class="col-md-12" ng-controller="ProfileRatingCtrl">
-    rating
+<div class="row" ng-controller="ProfileRatingCtrl">
+  <div class="col-xs-12" >
+    <h3>Я в рейтинге</h3>
+    <table class="table">
+      <tbody>
+      <tr class="info">
+        <td class="col-xs-2">4</td>
+        <td class="col-xs-4"><a href="#">Mark</a></td>
+        <td class="col-xs-6">2500</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 
+  <div class="col-xs-12">
+    <h3>Все пользователи</h3>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Пользователь</th>
+        <th>Очки</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-class="{info: n === 4}" ng-repeat="n in [1,2,3,4,5,6,7,8,9, 10]">
+        <td class="col-xs-2">{{ n }}</td>
+        <td class="col-xs-4"><a href="#">Mark</a></td>
+        <td class="col-xs-6">{{ 10000 / n }}</td>
+      </tr>
+      </tbody>
+    </table>
+    <nav>
+      <ul class="pager">
+        <li><a href="#"><</a></li>
+        <li><a href="#">></a></li>
+      </ul>
+    </nav>
   </div>
 </div>
