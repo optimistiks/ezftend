@@ -1,23 +1,32 @@
-angular.module('ezdictFrontend', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'index', 'landing', 'profile']);
+angular.module('ezdictFrontend', [
+  'ui.bootstrap',
+  'ui.utils',
+  'ui.router',
+  'ngAnimate',
+  'index',
+  'landing',
+  'profile',
+  'common'
+]);
 
-angular.module('ezdictFrontend').config(function($stateProvider, $urlRouterProvider) {
+angular.module('ezdictFrontend').config(function ($stateProvider, $urlRouterProvider) {
 
-    /* Add New States Above */
-    $urlRouterProvider.otherwise('/');
+  /* Add New States Above */
+  $urlRouterProvider.otherwise('/');
 
 });
 
-angular.module('ezdictFrontend').run(function($rootScope) {
+angular.module('ezdictFrontend').run(function ($rootScope) {
 
-    $rootScope.safeApply = function(fn) {
-        var phase = $rootScope.$$phase;
-        if (phase === '$apply' || phase === '$digest') {
-            if (fn && (typeof(fn) === 'function')) {
-                fn();
-            }
-        } else {
-            this.$apply(fn);
-        }
-    };
+  $rootScope.safeApply = function (fn) {
+    var phase = $rootScope.$$phase;
+    if (phase === '$apply' || phase === '$digest') {
+      if (fn && (typeof(fn) === 'function')) {
+        fn();
+      }
+    } else {
+      this.$apply(fn);
+    }
+  };
 
 });

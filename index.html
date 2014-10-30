@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="ezdictFrontend">
 <head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link href="temp/bootstrap.css" rel="stylesheet">
-    <link href="temp/app.css" rel="stylesheet">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link href="temp/bootstrap.css" rel="stylesheet">
+  <link href="temp/app.css" rel="stylesheet">
 </head>
 <body>
 
@@ -46,14 +46,16 @@
 <script src="profile/profile.js"></script>
 <script src="profile/partial/profile/profile.js"></script>
 <script src="profile/partial/profile.personal/profile.personal.js"></script>
+<script src="common/common.js"></script>
+<script src="common/directive/holderFix.js"></script>
 <!-- Add New Component JS Above -->
 
 <div>
-    <div id="content" class="container">
-        <div ng-include="'index/partial/header/header.html'" ng-if="!isAuthenticated"></div>
-        <div ng-include="'landing/partial/header/header.html'" ng-if="isAuthenticated"></div>
-        <div ui-view></div>
-    </div>
+  <div id="content" class="container">
+    <div ng-include="'index/partial/header/header.html'" ng-if="!isAuthenticated"></div>
+    <div ng-include="'landing/partial/header/header.html'" ng-if="isAuthenticated"></div>
+    <div ui-view></div>
+  </div>
 </div>
 
 </body>
