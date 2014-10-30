@@ -11,6 +11,10 @@ angular.module('profile').config(function($stateProvider) {
         url: '/personal',
         templateUrl: 'profile/partial/profile.personal/profile.personal.html'
     });
+    $stateProvider.state('profile.rating', {
+        url: '/rating',
+        templateUrl: 'profile/partial/profile.rating/profile.rating.html'
+    });
     /* Add New States Above */
 
 });
