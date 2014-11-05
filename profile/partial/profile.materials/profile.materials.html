@@ -1,0 +1,28 @@
+<div class="row" ng-controller="ProfileMaterialsCtrl">
+  <div class="col-xs-12">
+    <h3>Вы добавили <span class="label label-default">14</span></h3>
+    <hr>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Название</th>
+        <th>Добавлен</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="n in [1,2,3,4,5,6,7,8,9,10]">
+        <td class="col-xs-2">{{ n }}</td>
+        <td class="col-xs-4"><a href="#">Текст заголовка</a></td>
+        <td class="col-xs-6">21.07.2014 в 14:31</td>
+      </tr>
+      </tbody>
+    </table>
+    <nav>
+      <ul class="pager">
+        <li><a href="#"><</a></li>
+        <li><a href="#">></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

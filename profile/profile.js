@@ -19,6 +19,14 @@ angular.module('profile').config(function($stateProvider) {
         url: '/control',
         templateUrl: 'profile/partial/profile.control/profile.control.html'
     });
+    $stateProvider.state('profile.materials', {
+        url: '/materials',
+        templateUrl: 'profile/partial/profile.materials/profile.materials.html'
+    });
+    $stateProvider.state('profile.private', {
+        url: '/private',
+        templateUrl: 'profile/partial/profile.private/profile.private.html'
+    });
     /* Add New States Above */
 
 });
