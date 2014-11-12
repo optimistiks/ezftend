@@ -24,10 +24,10 @@ angular.module('common').directive('textSelect', function ($window, $log, $rootS
         return userSelection.toString();
       };
 
-      var mouseupHandler = function () {
+      var mouseupHandler = function ($event) {
         var selectedText = getSelectedText().replace(/^\s+|\s+$/g, '');
         $log.debug('common.directive.textSelect', 'mouseup handler', selectedText);
-        $rootScope.$broadcast(event.TEXT_SELECT, selectedText);
+        $rootScope.$broadcast(event.TEXT_SELECT, selectedText, $event);
       };
 
       element.on('mouseup', mouseupHandler);
