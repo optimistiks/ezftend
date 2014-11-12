@@ -94,7 +94,7 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     {src: ['img/**'], dest: 'dist/'},
-                    {src: ['bower_components/font-awesome/fonts/**'], dest: 'dist/', filter: 'isFile', expand: true}
+                    {src: ['fonts/**'], dest: 'dist/', filter: 'isFile', expand: true}
                     //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'dist/'},
                     //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'dist/css/',flatten:true,expand:true},
                     //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'dist/'}
@@ -210,14 +210,14 @@ module.exports = function (grunt) {
         //https://github.com/gruntjs/grunt-contrib-watch/issues/156
 
         var tasksToRun = [];
-		
+
 		if ((filepath.lastIndexOf('.scss') !== -1 && filepath.lastIndexOf('.scss') === filepath.length - 5) ||
-			(filepath.lastIndexOf('.sass') !== -1 && filepath.lastIndexOf('.sass') === filepath.length - 5)) 
+			(filepath.lastIndexOf('.sass') !== -1 && filepath.lastIndexOf('.sass') === filepath.length - 5))
 		{
 		    tasksToRun.push('compass');
 		}
 
-		
+
         if (filepath.lastIndexOf('.js') !== -1 && filepath.lastIndexOf('.js') === filepath.length - 3) {
 
             //lint the changed js file
